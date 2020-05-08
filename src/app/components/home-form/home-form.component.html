@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>DashBoard</h1>
+      <div id="add-question">
+        <h2>Question</h2>
+        <button (click)="add()" type="button">Add</button>
+      </div>
+
+    <table class="table table-striped">
+      <tr *ngFor="let question of listquestion" style="position: relative;background-color: rosybrown;">
+        <td style="width: 50px; text-align:center;">{{ question.id }}</td>
+        <td style="padding: 10px;">{{ question.title }}</td>
+        <td style="width: 70px;"><button (click) = "addChoice($event)" type="button" class="tableButtonadd" id="{{ question.id }}">Add Choice</button></td>
+        <td style="width: 70px;"><button (click) = "editQuestion($event)" type="button" class="tableButtonEdit" id="{{ question.id }}">Edit</button></td>
+        <td style="width: 70px;"><button (click) = "deleteQuestion($event)" type="button" class="tableButtonDelete" id="{{ question.id }}">Delete</button></td>
+      </tr>
+      </table>
+
+
+
+      <h2>Exam</h2>
+      <div id="add-exam">
+          <button  (click)="addExam()" type="button">Add</button>
+        </div>
+
+    <table>
+    <tr *ngFor="let exam of listExam" style="position: relative;background-color: rosybrown;">
+      <td style="width: 50px; text-align:center;">{{ exam.id }}</td>
+      <td style="padding: 10px;">{{ exam.title }}</td>
+      <td style="width: 70px;"><button (click) = "editExam($event)" type="button" class="tableButtonEdit" id="{{exam.id }}">Edit</button></td>
+      <td style="width: 70px;"><button (click) = "deleteExam($event)" type="button" class="tableButtonDelete" id="{{ exam.id }}">Delete</button></td>
+    </tr>
+    </table>
+
+  </div>

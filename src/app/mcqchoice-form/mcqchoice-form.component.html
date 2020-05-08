@@ -1,0 +1,22 @@
+<div class="container">
+<p>MCQ Choice</p>
+<div id='dropdown'>
+  <select [(ngModel)]="selectTrue">
+    <option value="-1" disabled selected>Select your option</option>
+    <option value="0">true</option>
+    <option value="1">false</option>
+    </select><br>
+<input [(ngModel)]="mcqchoice.choice" type="text" placeholder="Enter choices">
+<button (click) = "save()"><label>Submit</label></button>
+<button (click) = "update()"><label>Update</label></button>
+<br><br>
+<table>
+  <tr *ngFor="let choice of listChoice" style="position: relative;background-color: rosybrown;">
+    <td style="width: 50px; text-align:center;">{{ choice.id }}</td> <!-- THIS IS  MCQCHOICE ID-->
+    <td style="padding: 10px;">{{ choice.choice }}</td>
+    <td style="padding: 10px;">{{ choice.valid }}</td>
+    <td ><button (click) = "editChoice($event)" type="button" class="tableButtonEdit" id="{{choice.id }}">Edit</button></td>
+    <td ><button (click) = "deleteChoice($event)" type="button" class="tableButtonDelete" id="{{choice.id }}">Delete</button></td>
+  </tr>
+  </table>
+</div>

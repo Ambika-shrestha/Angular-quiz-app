@@ -1,0 +1,20 @@
+.container h1{
+	text-align: center;
+	color: grey;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+	background-color: honeydew;
+	
+}
+.button{
+	height: 100px;
+	width: 100px;
+	background-color: rosybrown;
+}
+
+.container h2{
+	color: blue;
+}
